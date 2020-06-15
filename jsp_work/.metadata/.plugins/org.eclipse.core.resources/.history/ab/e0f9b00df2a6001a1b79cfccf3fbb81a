@@ -1,0 +1,35 @@
+<%@page import="jdbc.UserDao"%>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+    pageEncoding="EUC-KR"%>
+    
+<jsp:useBean id="user" class="jdbc.User" scope="request" />
+<jsp:setProperty name="user" property="*"/>
+
+<%
+ 	String id = request.getParameter("id"); 
+	UserDao dao = UserDao.getInstance();
+	user = dao.selectUser(id);
+	
+	System.out.println(user);
+	
+	// user가 null이면 사용가능
+	boolean result = user == null ? true : false;
+	System.out.println(result);
+	String url = "registerForm.jsp?result="+result;
+	
+/* 	if(result) {
+		out.println(
+			"<script> alert('사용 가능한 아이디 입니다!');"
+			+"location.href='" +url +"';"
+			+"</script>"
+		);
+		
+	} else {
+		out.println(
+			"<script> alert('이미 사용중인 아이디 입니다');"
+			+"location.href='"+ url + "'"
+			+"</script>"
+		);
+	} */
+	
+%>

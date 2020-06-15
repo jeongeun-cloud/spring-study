@@ -1,0 +1,15 @@
+<%@page import="jdbc.User"%>
+<%@page import="jdbc.UserDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+    
+<jsp:useBean id="user" class="jdbc.User" scope="request" />
+<jsp:setProperty name="user" property="*"/>
+
+<%
+	UserDao dao = UserDao.getInstance();
+	dao.insertUser(user);
+%>
+
+<jsp:forward page="userInfo.jsp" />

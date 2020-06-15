@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>무료 운세보기</title>
+<style>
+	.container{
+		width : 340px;
+		height : 150px;
+		background-color: #cddc398c;
+		padding: 10px 0 0 10px;
+	}
+	#btn {
+		text-align: center;
+		margin-top : 20px;
+	}
+
+</style>
+</head>
+<body>
+
+<form action="/result.jsp" method="POST">
+  <div class="container">
+    <label for="name"><b>이름</b></label>
+    <input type="text" name="name"> <br>
+
+    <label for="age"><b>나이</b></label>
+    <input type="text" name="age" required> <br>
+    
+    <label for="birth"><b>생년월일</b></label>
+    <input type="date" name="birth" required> <br>
+    
+    <label for="gender"><b>성별</b></label>
+    <input type="radio" name="gender" value="man"> 남
+    <input type="radio" name="gender" value="woman" checked> 여 <br>
+    
+    <div id="btn">
+    	<button type="submit">운세보기</button>
+    </div>
+  </div>
+  
+</form>
+
+</body>
+</html>

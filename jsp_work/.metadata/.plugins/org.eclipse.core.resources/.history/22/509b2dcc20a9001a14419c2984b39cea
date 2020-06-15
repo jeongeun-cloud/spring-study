@@ -1,0 +1,28 @@
+<%@page import="jdbc.User"%>
+<%@page import="jdbc.UserDao"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+
+    
+<jsp:useBean id="user" class="jdbc.User" scope="request" />
+<jsp:setProperty name="user" property="*"/>
+<%-- <jsp:setProperty name="user" property="id" param="id"/> --%>
+
+<%
+	// 서버단 유효성 체크
+	
+	
+ 	UserDao dao = UserDao.getInstance();
+	int cnt = dao.insertUser(user);
+	
+	if(cnt != 1) {
+		// 에러!
+		// 1. 페이지 포워드 - 레지폼으로
+		// 2. 레지폼에서 useBean으로 값 가져와서
+		// 3. 다시 되있던 값 벨류로 뿌려주기
+		
+		request.getRequestDispatcher("registerForm.jsp").forward(request, response);
+	}
+ %>
+
+<jsp:forward page="userInfo.jsp"></jsp:forward>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 6 elements to &apos;css&apos;&#x0D;&#x0A;- Original project: &apos;SessionJJE&apos;&#x0D;&#x0A;- Destination element: &apos;css&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     header.css&#x0D;&#x0A;     pricing.css&#x0D;&#x0A;     index.css&#x0D;&#x0A;     loginForm.css&#x0D;&#x0A;     lecture.css&#x0D;&#x0A;     board.css" description="Copy files" element1="WebContent/css/header.css" element2="WebContent/css/pricing.css" element3="WebContent/css/index.css" element4="WebContent/css/loginForm.css" element5="WebContent/css/lecture.css" element6="WebContent/css/board.css" files="6" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1591062113161" target="/Session/WebContent/css" units="0" version="1.0"/>
+</session>
